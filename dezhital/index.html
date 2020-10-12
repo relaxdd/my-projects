@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<title>Дежиталь</title>
+
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Piazzolla&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.min.css">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+		<!-- <link rel="manifest" href="img/favicon/site.webmanifest"> -->
+		<link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<!-- <link rel="shortcut icon" href="/img/favicon/favicon.ico" type="image/x-icon"> -->
+		<!-- <meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff"> -->
+
+		<script src="https://use.fontawesome.com/3cdcb2db9f.js"></script>
+	</head>
+	<body>
+
+		<div class="modal fade" id="popup-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Заказать обратный звонок</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="form-popup">
+							<div class="form-group">
+								<label for="user-name">Как вас зовут?</label>
+								<input type="text" name="user-name" class="form-control" id="user-name" placeholder="Имя" autocomplete="off" required>
+							</div>
+							<div class="form-group">
+								<label for="user-phone">Ваш номер телефона</label>
+								<input type="tel" name="user-phone" class="form-control" id="user-phone" placeholder="8 999 999 9999" autocomplete="off" required>
+								<small class="form-text text-muted">Мы не передаем данные наших клиентов третьим лицам</small>
+							</div>
+							<input type="hidden" name="reason-call" id="reason-modal" value="">
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" form="form-popup" class="btn btn-submit-modal">Заказать</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<header class="header">
+	<div class="top-header d-none d-lg-block">
+		<div class="container">
+			<div class="row top-header__inner">
+				<div class="col-12 text-right">
+					<div class="top-header__link">
+						<i class="fa fa-map-marker link__icon" aria-hidden="true"></i>
+						<a href="https://yandex.ru/maps/-/CCQ3FOwJpB" target="_blank">г. Ульяновск, ул. Урицкого д. 98</a>
+					</div>
+					<div class="top-header__link">
+						<i class="fa fa-phone link__icon" aria-hidden="true"></i>
+						<a href="tel:+79272700885">+7 (927) 270 0885</a>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+	</div>
+	<div class="header-preview">
+		<div id="sticky" class="header-content">
+			<div class="container relative">
+				<div class="row header-content__inner">
+					
+					<h1 class="logo-site">Дежиталь</h1>
+					<span class="mobile-toggler d-lg-none">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</span>
+					<div class="col-9 col-xl-8 d-none d-lg-flex justify-content-end">
+						<nav class="header-nav">
+							<a href="#monuments-marble" class="header-nav__item">Памятники из мрамора</a>
+							<a href="#monuments-granite" class="header-nav__item">Памятники из гранита</a>
+							<a href="#photo-ceramics" class="header-nav__item">Фотокерамика</a>
+							<a href="#gallery_ourworks" class="header-nav__item">Наши работы</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid d-lg-none">
+				<div class="row justify-content-center relative">
+					<div class="col-12 mobile-nav">
+						<nav class="header-nav">
+							<a href="#monuments-marble" class="header-nav__item">Памятники из мрамора</a>
+							<a href="#monuments-granite" class="header-nav__item">Памятники из гранита</a>
+							<a href="#photo-ceramics" class="header-nav__item">Фотокерамика</a>
+							<a href="#gallery_ourworks" class="header-nav__item">Наши работы</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="preview">
+			<div class="preview__content">
+				<div class="container">
+					<div class="row justify-content-around align-items-center">
+						<div class="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 text-center">
+							<h2 class="preview__title">Заголовок в превью</h2>
+							<p class="preview__text">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo sapiente tempore a fugiat, expedita at nulla voluptatibus error distinctio atque debitis ipsam odio necessitatibus deserunt rem repudiandae, ab voluptas sunt? Aut eum, ab rerum maxime eveniet aspernatur odit delectus modi beatae magni doloremque sequi, facilis dignissimos voluptatum, veniam quos cupiditate animi ex itaque, omnis. Vero, nisi nostrum, quam beatae possimus ab officia modi voluptas repellendus quaerat fugiat quidem natus vel, consectetur autem deserunt illo ad?
+							</p>
+						</div>
+						<div class="col-11 col-sm-10 col-md-8 col-lg-5 d-none d-lg-block cf__container mb-4">
+							<div class="cf__preview">
+								<h3 class="cf__preview_title">Закажите обратный звонок и мы перезвоним вам</h3>
+								
+								<form id="form_preview" class="cf-form">
+									<input type="text" name="user-name" placeholder="Ваше имя:" required class="cf__preview_input">
+									<input type="tel" name="user-phone" placeholder="Ваш телефон:" required class="cf__preview_input">
+									<textarea name="user-message" id="" cols="30" rows="5" resize="none" class="cf__preview_input cf__preview_textarea" placeholder="Сообщение, по желанию"></textarea>
+									<button type="submit" class="cf__preview_submit">Заказать звонок</button>
+								</form>
+								
+							</div>
+						</div>
+						<div class="col-8 d-lg-none cf-m__btn">
+							<span class="open-modal" data-reason="order-call">Заказать звонок</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</header>
+
+		<article>
+			<div class="section">
+				<div class="container-fluid container-lg">
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-11 col-lg-12">
+
+							<div class="row about justify-content-center ">
+								<div class="col-12 col-sm-11 col-md-7 col-lg-6">
+									<div id="block-for-slider"></div>
+								</div>
+								<div class="col-12 col-sm-9 col-md-5 col-lg-6 about__content">
+									<h2 class="about__title">Перечень наших услуг</h2>
+									<ul class="about__text">
+										<li>Изготовление и установка 3D памятников</li>
+										<li>Изготовление фотокерамики</li>
+										<li>Разные иконы из камня, из дерева</li>
+										<li>Фрезерования надписей ЧПУ станком</li>
+										<li>Нанесение портрета художником вручную</li>
+										<li>Доставка, Установка, Рассрочка</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<section class="section our-work">
+				<div id="monuments-marble" class="section-header section-header__green">
+					<h2 class="section-header__title">Памятники из мрамора</h2>
+					<p class="section-header__sub-title">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus voluptatibus architecto esse, similique magni, sed atque laboriosam reprehenderit libero asperiores, ad iusto illum, accusantium placeat vel dolorem ducimus.
+					</p>
+				</div>
+				<div class="container-fluid container-lg">
+					<div class="row justify-content-center justify-content-lg-around product-wrapper-3">
+						<div class="col-10 col-sm-9 col-lg-4 col-md-5  mb-3 mb-md-0">
+							<div class="our-work__item">
+								<div class="our-work__item-img">
+									<div class="img-slider-1"></div>
+								</div>
+								<div class="our-work__item-body">
+									<h3 class="our-work__item-title">Вертикальные</h3>
+									<p class="our-work__item-text">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
+									</p>
+									<span class="our-work__item-btn open-modal" data-reason="vertical-monument-marble">Заказать</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-10 col-sm-9 col-lg-4 col-md-5  mb-3 mb-md-0">
+							<div class="our-work__item">
+								<div class="our-work__item-img">
+									<div class="img-slider-2"></div>
+								</div>
+								<div class="our-work__item-body">
+									<h3 class="our-work__item-title">С крестом</h3>
+									<p class="our-work__item-text">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
+									</p>
+									<span class="our-work__item-btn open-modal" data-reason="monument-marble-with-cross">Заказать</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-10 col-sm-9 col-lg-4 col-md-5  mb-3 mb-md-0">
+							<div class="our-work__item">
+								<div class="our-work__item-img">
+									<div class="img-slider-3"></div>
+								</div>
+								<div class="our-work__item-body">
+									<h3 class="our-work__item-title">Горизонтальные</h3>
+									<p class="our-work__item-text">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, labore animi doloremque unde dignissimos inventore!
+									</p>
+									<span class="our-work__item-btn open-modal" data-reason="horisontal-monument-marble">Заказать</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</section>
+
+			<section class="section our-work">
+				<div id="monuments-granite" class="section-header section-header__green">
+					<h2 class="section-header__title">Памятники из гранита</h2>
+					<p class="section-header__sub-title">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus voluptatibus architecto esse, similique magni, sed atque laboriosam reprehenderit libero asperiores, ad iusto illum, accusantium placeat vel dolorem ducimus.
+					</p>
+				</div>
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-10">
+							<div class="row product-wrapper-4 justify-content-center">
+
+								<div class="col-11 col-sm-10 col-md-6 col-lg-3 mb-3 mb-md-4 mb-lg-0">
+									<div class="our-work__item">
+										<div class="our-work__item-img">
+											<div class="img-granite-1"></div>
+										</div>
+										<div class="our-work__item-body">
+											<h3 class="our-work__item-title">С ангелом</h3>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-with-angel">Заказать</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-11 col-sm-10 col-md-6 col-lg-3 mb-3 mb-md-4 mb-lg-0">
+									<div class="our-work__item">
+										<div class="our-work__item-img">
+											<div class="img-granite-2"></div>
+										</div>
+										<div class="our-work__item-body">
+											<h3 class="our-work__item-title">С крестом</h3>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-with-cross">Заказать</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-11 col-sm-10 col-md-6 col-lg-3 mb-3 mb-md-0">
+									<div class="our-work__item">
+										<div class="our-work__item-img">
+											<div class="img-granite-3"></div>
+										</div>
+										<div class="our-work__item-body">
+											<h3 class="our-work__item-title">Вертикальные</h3>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-vertical">Заказать</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-11 col-sm-10 col-md-6 col-lg-3 mb-3 mb-md-0">
+									<div class="our-work__item">
+										<div class="our-work__item-img">
+											<div class="img-granite-4"></div>
+										</div>
+										<div class="our-work__item-body">
+											<h3 class="our-work__item-title">Нестандартные</h3>
+											<span class="our-work__item-btn open-modal" data-reason="monuments-granite-no-standart">Заказать</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</section>
+
+			<section class="section our-work">
+				<div id="photo-ceramics" class="section-header section-header__green">
+					<h2 class="section-header__title">Портреты на памятники на стекле, керамограните. Фотокерамика</h2>
+					<p class="section-header__sub-title">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus voluptatibus architecto esse, similique magni, sed atque laboriosam reprehenderit libero asperiores, ad iusto illum, accusantium placeat vel dolorem ducimus.
+					</p>
+				</div>
+
+				<div class="container-fluid container-lg">
+					<div class="row justify-content-center justify-content-lg-around product-wrapper-3">
+						<div class="col-10 col-sm-9 col-md-4 mb-3 mb-md-0">
+							<div class="our-work__item">
+								<div class="our-work__item-img">
+									<div class="img-photo-ceramic-1"></div>
+								</div>
+								<div class="our-work__item-body">
+									<span class="our-work__item-btn open-modal" data-reason="photo-ceramics-1">Заказать</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-10 col-sm-9 col-md-4 mb-3 mb-md-0">
+							<div class="our-work__item">
+								<div class="our-work__item-img">
+									<div class="img-photo-ceramic-2"></div>
+								</div>
+								<div class="our-work__item-body">
+									<span class="our-work__item-btn open-modal" data-reason="photo-ceramics-2">Заказать</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-10 col-sm-9 col-md-4 mb-3 mb-md-0">
+							<div class="our-work__item">
+								<div class="our-work__item-img">
+									<div class="img-photo-ceramic-3"></div>
+								</div>
+								<div class="our-work__item-body">
+									<span class="our-work__item-btn open-modal" data-reason="photo-ceramics-3">Заказать</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="section-bg-form">
+				<div class="bg-form__overlay">
+					<div class="container-fluid">
+						<div class="row cf__first_wrapper">
+							<div class="col-xl-8 section-header section-header__bg-form">
+								<h3 class="cf__first_title">Заказать обратный звонок</h3>
+								<p class="cf__first_text">
+									Оставьте заявку и мы перезвоним вам в течении 15 минут
+								</p>
+							</div>
+							<div class="col-xl-8">
+								<form id="cf__first" class="cf-form">
+									<div class="cf__first_input">
+										<input type="text" name="user-name" required placeholder="Как вас зовут?">
+									</div>
+									<div class="cf__first_input">
+										<input type="tel" name="user-phone" required placeholder="Ваш телефон?">
+									</div>
+									<div class="cf__first_input cf__first_submit">
+										<button>Заказать</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section id="gallery_ourworks" class="section section_gallery">
+				<div class="container-fluid container-lg">
+					<div class="section-header">
+						<h2 class="section-header__title">Галерея наших работ</h2>
+						<p class="section-header__sub-title">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam accusamus voluptatibus architecto esse, similique magni, sed atque laboriosam reprehenderit libero asperiores, ad iusto illum, accusantium placeat vel dolorem ducimus.
+						</p>
+					</div>
+
+					<div class="product_gallery">
+						<div class="row justify-content-center">
+							<div class="col-12 col-sm-11 col-md-10">
+								<div class="gallery_tabs">
+									<span class="gallery_tabs__item active">Резные иконы из дерева, из камня</span>
+									<span class="gallery_tabs__item">Ограды</span>
+								</div>
+								<div class="gallery_wrapper">
+									<div class="wrapper_inner carved-icons active"></div>
+									<div class="wrapper_inner wrapper-fences"></div>
+								</div>
+							</div>				
+						</div>
+								
+					</div>
+				</div>
+					
+			</section>
+
+			<section class="section">
+
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-header__title our_advantage__header">Наши преимущества</h2>
+					</div>
+					<div class="our_advantage">
+						<div class="row justify-content-evenly">
+							<div class="our_advantage__item col-11 col-md-10 col-lg-4 col-xl-3">
+								<div class="our_advantage__icon">
+									<img src="img/icons/calendar-with-squares.svg" alt="">
+								</div>
+								<div class="our_advantage__body">
+									<h4 class="our_advantage__title">5 лет на рынке</h4>
+									<p class="our_advantage__text">За это время мы хорошо себя зарекомендовали, наши клиенты нам доверяют</p>
+								</div>
+							</div>
+
+							<div class="our_advantage__item col-11 col-md-10 col-lg-4 col-xl-3">
+								<div class="our_advantage__icon">
+									<img src="img/icons/high-quality.svg" alt="high-quality">
+								</div>
+								<div class="our_advantage__body">
+									<h4 class="our_advantage__title">Высокое качество</h4>
+									<p class="our_advantage__text">Мы придерживаемся всех технологий производства</p>
+								</div>
+							</div>
+
+							<div class="our_advantage__item col-11 col-md-10 col-lg-4 col-xl-3">
+								<div class="our_advantage__icon">
+									<img src="img/icons/like.svg" alt="">
+								</div>
+								<div class="our_advantage__body">
+									<h4 class="our_advantage__title">Большой выбор</h4>
+									<p class="our_advantage__text">Памятники, гранитые комплексы, изготавливаем под заказ</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+		<footer class="footer">
+	<div class="container">
+
+		<div class="footer__top">
+			<div class="row justify-content-center">
+				<div class="col-11 col-md-10 col-lg-4 footer_block">
+					<h3 class="footer_block__title">Контактная информация</h3>
+
+					<div class="footer_block__body">
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-envelope-o"></i>
+							</span>
+							<a href="mailto:degital-keramika@yandex.ru" target="_blank">degital-keramika@yandex.ru</a>
+						</div>
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-phone"></i>
+							</span>
+							<a href="tel:+79272700885" target="_blank">+7 (927) 270 0885</a>
+						</div>
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-map-marker"></i>
+							</span>
+							<a href="https://yandex.ru/maps/195/ulyanovsk/house/ulitsa_uritskogo_98/YEEYdQFiSEAGQFtufX9ycXRnZw==/?ll=48.362150%2C54.330843&source=wizgeo&utm_medium=maps-desktop&utm_source=serp&z=16" target="_blank">г. Ульяновск, ул. Урицкого д. 98</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-11 col-md-10 col-lg-4 footer_block">
+					<h3 class="footer_block__title">Что мы производим?</h3>
+					<div class="footer_block__body">
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-angle-right"></i>
+							</span>
+							<a href="#monuments-marble">Памятники из мрамора</a>
+						</div>
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-angle-right"></i>
+							</span>
+							<a href="#monuments-granite">Памятники из гранита</a>
+						</div>
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-angle-right"></i>
+							</span>
+							<a href="#photo-ceramics">Фотокерамика</a>
+						</div>
+						<div class="footer_block__item">
+							<span class="item_icon">
+								<i class="fa fa-angle-right"></i>
+							</span>
+							<a href="#gallery_ourworks">Галерея наших работ</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-11 col-md-10 col-lg-4 footer_block">
+					<h3 class="footer_block__title cf_title active">Заказать звонок</h3>
+
+					<div class="footer_block__body">
+						<form id="footer_form">
+							<div class="footer_form__item">
+								<input name="user-name" type="text" placeholder="Как вас зовут?"  required autocomplete="off">
+							</div>
+							<div class="footer_form__item">
+								<input name="user-phone" type="tel" placeholder="Ваш телефон?" requiredd autocomplete="off">
+							</div>
+							<div class="footer_form__item">
+								<button>Заказать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dedhital-copy">
+			<p>(с) 2020 Все права защищены! "Дежиталь"</p>
+		</div>
+	</div>
+</footer>
+		<script src="assets/js/jquery-3.5.1.min.js"></script>
+		<!-- <script src="assets/js/popper.min.js"></script> -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<script src="assets/js/script.min.js"></script>
+	</body>
+</html>
+
+<!-- <div class="load_img_yet">
+	<p id="load-btn">Загрузить еще..</p>
+</div> -->

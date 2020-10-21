@@ -520,6 +520,10 @@ body.wait {
   font-family: "Cormorant Garamond", serif;
 }
 
+.header-content__inner .logo-site__img {
+  height: 50px;
+}
+
 .header-content .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1000,7 +1004,7 @@ button.disabled {
   margin-bottom: 25px;
 }
 
-.footer_block:first-child .footer_block__item {
+.footer_block:first-child .footer_block__item:not(:last-child) {
   padding-bottom: 32px;
 }
 
@@ -1140,7 +1144,7 @@ button.disabled {
   }
 
   .header-content .mobile-nav .header-nav.active {
-    max-height: 210px;
+    max-height: 240px;
   }
 
   .header-content.sticked {
@@ -1156,6 +1160,23 @@ button.disabled {
   .header-content.sticked .mobile-nav .header-nav {
     top: 0;
     background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .mobile_contacts__item {
+    padding: 7px 5px;
+  }
+
+  .mobile_contacts__item i {
+    color: white;
+    margin-right: 5px;
+  }
+
+  .mobile_contacts__item a {
+    color: white;
+  }
+
+  .mobile_contacts__item a:hover {
+    text-decoration: none;
   }
 
   .mobile-toggler {
@@ -1387,6 +1408,13 @@ button.disabled {
   .footer_form__item:first-child {
     padding-top: 20px;
   }
+
+  .our_advantage__text {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100%;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1440,5 +1468,22 @@ button.disabled {
   #cf__first .cf__first_input {
     width: 85%;
     max-width: 85%;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .footer_block {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer_block__item:last-child {
+    padding-bottom: 0;
+  }
+
+  .footer_form__item {
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

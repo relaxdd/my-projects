@@ -1,0 +1,26 @@
+.auth_modal {
+  &__loading {
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+      opacity: 0.6;
+    }
+  }
+
+  .modal-loading__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .modal-form_error {
+    color: red;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 17px;
+  }
+}

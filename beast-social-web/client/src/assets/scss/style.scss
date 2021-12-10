@@ -1,0 +1,88 @@
+@import "vars";
+
+body {
+  background-color: #edeef0;
+  overflow-x: hidden;
+}
+
+@import "modules/header.scss";
+@import "modules/modal-auth.scss";
+@import "modules/sidebar.scss";
+
+.form-label {
+  font-weight: 600;
+}
+
+.weight-light {
+  font-weight: 300;
+}
+
+.weight-regular {
+  font-weight: 400;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+.loading-page__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+  .spinner-border {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1160px;
+  }
+}
+
+aside {
+  position: sticky;
+  top: 15px;
+}
+
+// .previewImage {
+//   display: table;
+//   height: 150px;
+//   width: 100%;
+//   margin-top: 15px;
+// }
+
+// .previewImage .previewImageWrap {
+//   display: table-row;
+// }
+
+// .previewImage .previewImageWrap div {
+//   display: table-cell;
+//   max-width: auto;
+//   vertical-align: top;
+//   position: relative;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
+
+// .previewImage .previewImageWrap div:before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   height: 100%;
+//   width: 20px;
+//   background: #ffffff;
+// }

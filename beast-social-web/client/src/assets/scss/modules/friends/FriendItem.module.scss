@@ -1,0 +1,40 @@
+@import "../../vars.scss";
+// vars...
+$avatar_size: 60px;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+.avatarWrapper {
+  display: block;
+  text-decoration: none;
+}
+
+.avatarImage {
+  @extend %avatar_img;
+  height: $avatar_size;
+  width: $avatar_size;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.userLink {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+}
+
+.moreActions {
+    height: 18px;
+    cursor: pointer;
+}

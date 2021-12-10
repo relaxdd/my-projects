@@ -1,0 +1,127 @@
+@import "../vars";
+
+.postFormWrapper {
+  @extend %box_wrapper;
+  margin-bottom: 1rem;
+}
+
+.postFormContent {
+  padding: 13px 20px;
+}
+
+.postFormTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.postFormDriver {
+  margin-top: 2.5rem;
+  margin-bottom: 13px;
+}
+
+.postFormBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postFormWidgets {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.previewImageWrapper {
+  display: none;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 1.5rem;
+}
+
+.previewImgItem {
+  position: relative;
+}
+
+.removePreviewImg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.removePreviewImgBtn {
+  color: white;
+  padding: 0 7px;
+  font-size: 18px;
+}
+
+.previewImageOne {
+  height: auto;
+  max-width: 100%;
+}
+
+.previewImageTwo {
+  display: flex;
+  width: auto;
+  max-height: 190px;
+}
+
+.previewImageMore {
+  max-height: 180px;
+  width: auto;
+}
+
+.previewImage {
+  height: auto;
+  max-width: 100%;
+}
+
+.postFormWidgetsItem {
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.postFormShare {
+  display: block;
+}
+
+// outside form
+.postFormAvatar {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  @extend %avatar_img;
+}
+
+.postFormInput {
+  flex-grow: 1;
+  padding: 7px 0 0;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.postFormBtn {
+  display: flex !important;
+  align-items: center;
+  padding: 4px 6px !important;
+}
+
+.rejectedTextError {
+  font-size: 17px;
+  text-align: center;
+  color: red;
+}

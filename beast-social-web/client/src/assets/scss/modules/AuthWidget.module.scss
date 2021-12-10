@@ -1,0 +1,12 @@
+@import "../vars";
+
+.authWidgetWrap {
+  position: sticky;
+  top: 15px;
+}
+
+.authWidgetContent {
+    @extend %box_wrapper;
+    padding: 20px;
+}
+

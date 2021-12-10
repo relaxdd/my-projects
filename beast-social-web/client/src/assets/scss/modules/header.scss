@@ -1,0 +1,30 @@
+.header {
+  margin-bottom: 30px;
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__link {
+      text-decoration: none;
+      color: white;
+    }
+
+    &__link-active {
+      opacity: 0.7;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}

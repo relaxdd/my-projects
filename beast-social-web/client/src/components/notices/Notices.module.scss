@@ -1,0 +1,73 @@
+.noticeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 10px;
+  background-color: rgba(61, 113, 196, 0.7);
+  color: white;
+}
+
+.noticeText {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.noticeClose {
+  position: absolute;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// Error Notifications
+.errorNoticeWrapper {
+  position: fixed;
+  z-index: 999;
+  top: 15px;
+  right: -100%;
+  opacity: 0;
+  min-width: 300px;
+  max-width: 350px;
+  transition: right 0.6s ease-out;
+
+  &__show {
+    transition: opacity 0.6s ease-out;
+    right: 15px;
+    opacity: 1;
+  }
+}
+
+.errorNoticeContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px 20px 15px;
+  background-color: #ff0800;
+  color: white;
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.errorNoticeClose {
+  position: absolute;
+  right: 13px;
+  font-size: 26px;
+  height: 20px;
+  line-height: 15px;
+
+  &:hover {
+    opacity: .7;
+    cursor: pointer;
+  }
+}

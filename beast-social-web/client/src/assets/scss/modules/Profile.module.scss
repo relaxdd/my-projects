@@ -1,0 +1,107 @@
+@import "../vars";
+
+.originBoxContainer {
+  position: sticky;
+  top: 15px;
+}
+
+.originBoxWrapper {
+  @extend %box_wrapper;
+}
+
+.userInfoTop {
+  padding: 20px;
+}
+
+.userFullName {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.userInfoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.userInfoBlock {
+  display: flex;
+}
+// dce1e6
+
+.userInfoParam {
+  color: #818c99;
+  font-size: 14px;
+  width: 30%;
+}
+
+.userInfoValue {
+  font-size: 14px;
+}
+
+.userInfoBottom {
+  border-top: 1px solid #dce1e6;
+  padding: 15px 0;
+}
+
+// Avatar
+.userAvatarWrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover .userAvatarEditWrapper {
+    max-height: 100%;
+  }
+}
+
+.userInfoAvatar {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  height: 255px;
+  @extend %avatar_img;
+}
+
+.userAvatarEditWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: rgba(29, 32, 34, 0.7);
+  max-height: 0;
+  transition: max-height 0.6s ease-out;
+}
+
+.userAvatarEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 10px 0;
+}
+
+.avatarEditItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+  opacity: 0.7;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.avatarEditItemImg {
+  height: 18px;
+  width: 18px;
+}
+
+.avatarEditItemText {
+  color: white;
+  font-size: 15px;
+}

@@ -1,0 +1,101 @@
+@import "../vars";
+
+.editWrapper {
+  @extend %box_wrapper;
+  margin-bottom: 15px;
+}
+
+.editWrapperHeader {
+  display: block;
+  border-bottom: 1px solid #dce1e6;
+  height: 54px;
+  line-height: 54px;
+  font-weight: 500;
+}
+
+.editWrapperHeaderMore {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.togglerVisibleSection {
+  font-size: 28px;
+  color: #929aa3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.editWrapperFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #dce1e6;
+  height: 64px;
+  line-height: 64px;
+}
+
+.editWrapperHeader,
+.editWrapperFooter {
+  padding: 0 25px;
+  font-size: 16px;
+  outline: 0;
+}
+
+.editWrapperContent {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.editContentItem {
+  display: block;
+}
+
+// Edit Nav
+.editNavWrapper {
+  position: sticky;
+  top: $top_gap;
+}
+
+.editNavList {
+  padding: 7px 0;
+}
+
+.editNavItem {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 20px;
+  text-decoration: none;
+  color: $link_color;
+  white-space: nowrap;
+  height: 38px;
+  font-size: 15px;
+  cursor: pointer;
+
+  &:not(&__active):hover {
+    background-color: rgba(174, 183, 194, 0.12);
+  }
+
+  &__active {
+    font-weight: 500;
+    color: black;
+    padding-left: 18px;
+    background-color: rgba(174, 183, 194, 0.16);
+    border-left: 2px solid $link_color;
+  }
+
+  &__active:hover {
+    color: inherit;
+  }
+}
+
+.editSaveBtn {
+  display: flex !important;
+  align-items: center;
+  gap: 7px;
+}

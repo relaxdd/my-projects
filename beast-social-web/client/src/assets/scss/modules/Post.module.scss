@@ -1,0 +1,200 @@
+@import "../vars";
+
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  @extend %box_wrapper;
+  height: 100%;
+}
+
+// Post Header
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.headerRight {
+  position: relative;
+
+  &__visible .headerActionsMenu {
+    visibility: visible;
+    opacity: 1;
+    top: calc(100% + 7px);
+    pointer-events: auto;
+  }
+}
+
+.headerActionsMenuToggler {
+  display: flex;
+  color: #aeb7c2;
+  cursor: pointer;
+}
+
+// top 100ms linear, bottom 100ms linear,
+.headerActionsMenu {
+  position: absolute;
+  right: 0;
+  top: 51px;
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 180px;
+  max-width: 250px;
+  transition: opacity 100ms linear, top 100ms linear, visibility 100ms linear;
+  background-color: #fff;
+  padding: 7px 0;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
+  pointer-events: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    height: 7px;
+  }
+}
+
+.headerActionsMenuItem {
+  padding: 7px 10px;
+  font-size: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(174, 183, 194, 0.12);
+  }
+}
+
+.userAvatar {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  @extend %avatar_img;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.postAuthor {
+  font-size: 14px;
+}
+
+.postAuthorFix {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.postFixedIcon {
+  font-size: 17px;
+  color: #99a2ad;
+}
+
+.postDate {
+  font-size: 13px;
+  color: #818c99;
+}
+// Post Body
+.postBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.postDriver {
+  height: 1px;
+  width: 100%;
+  // color: #DCE1E6;
+  margin: 0;
+}
+
+// Post Content
+.postContent {
+  margin: 15px 0;
+}
+
+.postText {
+  white-space: pre-wrap;
+  margin-bottom: 0;
+  max-height: 170px;
+  overflow-y: hidden;
+
+  &__full {
+    max-height: 100%;
+  }
+}
+
+.textBtnFull {
+  color: #2a5885;
+  cursor: pointer;
+}
+
+// Post Footer
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.footerBlock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.likeBlock__liked {
+  color: #0d6efd;
+}
+
+// Post Views
+.postViews {
+  color: #99a2ad;
+}
+
+.viewsIcon {
+  font-size: 18px;
+}
+
+.viewsCount {
+  font-size: 14px;
+}
+
+// Additional block under content
+.additionalInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #99a2ad;
+}
+
+// Post Likes
+.likeIcon {
+  font-size: 26px;
+}
+
+.likeCoun {
+  font-size: 15px;
+}
+
+.likeLoader {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 9px;
+}

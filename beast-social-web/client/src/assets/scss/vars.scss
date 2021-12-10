@@ -1,0 +1,17 @@
+$border_radius: 6px;
+$top_gap: 15px;
+$link_color: #2a5885;
+
+%box_wrapper {
+  border: 1px solid #e7e8ec;
+  border-radius: $border_radius;
+  box-shadow: 0 1px 0 0 var(--separator_common),
+    0 0 0 1px var(--separator_alternate);
+  background-color: white;
+}
+
+%avatar_img {
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 50%;
+}

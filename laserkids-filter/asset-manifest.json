@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/my-projects/laserkids-filter/static/css/main.bdd90d52.chunk.css",
-    "main.js": "/my-projects/laserkids-filter/static/js/main.c8bdf5f3.chunk.js",
-    "main.js.map": "/my-projects/laserkids-filter/static/js/main.c8bdf5f3.chunk.js.map",
+    "main.css": "/my-projects/laserkids-filter/static/css/main.8fd42aca.chunk.css",
+    "main.js": "/my-projects/laserkids-filter/static/js/main.8d5c5063.chunk.js",
+    "main.js.map": "/my-projects/laserkids-filter/static/js/main.8d5c5063.chunk.js.map",
     "runtime-main.js": "/my-projects/laserkids-filter/static/js/runtime-main.ad019a6e.js",
     "runtime-main.js.map": "/my-projects/laserkids-filter/static/js/runtime-main.ad019a6e.js.map",
-    "static/css/2.0a9ec390.chunk.css": "/my-projects/laserkids-filter/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.fdaf671d.chunk.js": "/my-projects/laserkids-filter/static/js/2.fdaf671d.chunk.js",
-    "static/js/2.fdaf671d.chunk.js.map": "/my-projects/laserkids-filter/static/js/2.fdaf671d.chunk.js.map",
+    "static/css/2.fda8c847.chunk.css": "/my-projects/laserkids-filter/static/css/2.fda8c847.chunk.css",
+    "static/js/2.e29cadbf.chunk.js": "/my-projects/laserkids-filter/static/js/2.e29cadbf.chunk.js",
+    "static/js/2.e29cadbf.chunk.js.map": "/my-projects/laserkids-filter/static/js/2.e29cadbf.chunk.js.map",
     "index.html": "/my-projects/laserkids-filter/index.html",
-    "static/css/2.0a9ec390.chunk.css.map": "/my-projects/laserkids-filter/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.bdd90d52.chunk.css.map": "/my-projects/laserkids-filter/static/css/main.bdd90d52.chunk.css.map",
-    "static/js/2.fdaf671d.chunk.js.LICENSE.txt": "/my-projects/laserkids-filter/static/js/2.fdaf671d.chunk.js.LICENSE.txt",
+    "static/css/2.fda8c847.chunk.css.map": "/my-projects/laserkids-filter/static/css/2.fda8c847.chunk.css.map",
+    "static/css/main.8fd42aca.chunk.css.map": "/my-projects/laserkids-filter/static/css/main.8fd42aca.chunk.css.map",
+    "static/js/2.e29cadbf.chunk.js.LICENSE.txt": "/my-projects/laserkids-filter/static/js/2.e29cadbf.chunk.js.LICENSE.txt",
     "static/media/delete-red.0a2da310.svg": "/my-projects/laserkids-filter/static/media/delete-red.0a2da310.svg",
     "static/media/delete.e4efcb06.svg": "/my-projects/laserkids-filter/static/media/delete.e4efcb06.svg",
     "static/media/shopping-cart-white.61bc96f9.svg": "/my-projects/laserkids-filter/static/media/shopping-cart-white.61bc96f9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ad019a6e.js",
-    "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.fdaf671d.chunk.js",
-    "static/css/main.bdd90d52.chunk.css",
-    "static/js/main.c8bdf5f3.chunk.js"
+    "static/css/2.fda8c847.chunk.css",
+    "static/js/2.e29cadbf.chunk.js",
+    "static/css/main.8fd42aca.chunk.css",
+    "static/js/main.8d5c5063.chunk.js"
   ]
 }
